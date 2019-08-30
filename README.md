@@ -15,13 +15,13 @@ Gradle 5.4.1
 1. 主项目 ``build.gradle 加入 apply plugin: 'kotlin-kapt'``
 ![](/img/kapt.webp)
 2. 需要的依赖
-(```)
+```gradle
 /* Dagger 2 */
-        implementation 'com.google.dagger:dagger:2.24'
-        implementation 'com.google.dagger:dagger-android-support:2.24'
-        kapt 'com.google.dagger:dagger-compiler:2.24'
+        implementation 'com.google.dagger:dagger:2.24'`
+        implementation 'com.google.dagger:dagger-android-support:2.24'`
+        kapt 'com.google.dagger:dagger-compiler:2.24'`
         kapt 'com.google.dagger:dagger-android-processor:2.24'   
-(```)
+```
      
         
         
