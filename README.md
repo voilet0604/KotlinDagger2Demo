@@ -12,9 +12,9 @@ Gradle 5.4.1
 ### 下面的用一个简单小例子，展示下kotlin+dagger2的使用
 #### gradle配置
 
-1.主项目 ``build.gradle 加入 apply plugin: 'kotlin-kapt'``
+1. 主项目 ``build.gradle 加入 apply plugin: 'kotlin-kapt'``
 ![](/img/kapt.png)
-2.需要的依赖
+2. 需要的依赖
 ``
 /* Dagger 2 */
         implementation 'com.google.dagger:dagger:2.24'
