@@ -5,6 +5,7 @@ import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import android.view.Menu
 import android.view.MenuItem
+import com.example.kotlindagger2demo.dagger2.DaggerUserComponent
 import com.example.kotlindagger2demo.mvp.bean.User
 import com.example.kotlindagger2demo.mvp.reg.RegContract
 import com.example.kotlindagger2demo.mvp.reg.RegPresenter
@@ -14,6 +15,7 @@ import javax.inject.Inject
 
 /**
  * 需要继承DaggerAppCompatActivity
+ * 自动注入
  */
 class ScrollingActivity : DaggerAppCompatActivity(), RegContract.View {
 
@@ -29,7 +31,6 @@ class ScrollingActivity : DaggerAppCompatActivity(), RegContract.View {
         setContentView(R.layout.activity_scrolling)
         supportFragmentManager.beginTransaction().add(R.id.fl_view, mContentFragment)
             .commitAllowingStateLoss()
-
         presenter.bindView(this)
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
@@ -54,7 +55,10 @@ class ScrollingActivity : DaggerAppCompatActivity(), RegContract.View {
         // as you specify a parent activity in AndroidManifest.xml.
 
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                startActivity(UserActivity.newIntent(this))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
