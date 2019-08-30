@@ -12,6 +12,9 @@ import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_scrolling.*
 import javax.inject.Inject
 
+/**
+ * 需要继承DaggerAppCompatActivity
+ */
 class ScrollingActivity : DaggerAppCompatActivity(), RegContract.View {
 
     @Inject

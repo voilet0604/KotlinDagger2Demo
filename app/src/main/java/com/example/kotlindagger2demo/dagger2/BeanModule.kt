@@ -24,7 +24,10 @@ object BeanModule {
 
     @JvmStatic
     @Provides
-    fun injectUser(name: String, @Named("ag") age: Int): User =
+    fun injectUser(
+        name: String, //String 类型 会对应找当前Module中String类型，赋值
+        @Named("ag") age: Int //当一个module内有多个相同类型时候，可以通过Named注解进行区分
+    ): User =
         User(name, age)
 
 }

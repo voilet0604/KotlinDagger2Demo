@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
+/**
+ * 需要继承DaggerFragment
+ */
 class ContentFragment @Inject constructor() : DaggerFragment() {
 
     override fun onCreateView(
