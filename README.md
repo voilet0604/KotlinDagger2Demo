@@ -121,11 +121,11 @@ Gradle 5.4.1
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_scrolling)
             //使用user
-            Log.e("onCreate", "user $user  p is ${presenter.hashCode()}")
+            Log.e("onCreate", "user $user")
     
         }
     }
 
 ```        
 
-### 一个简单的mvp 直接看代码
+### 项目中还有一个简单的mvp 直接看代码
